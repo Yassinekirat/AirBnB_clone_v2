@@ -2,7 +2,8 @@
 """
 script that starts a Flask web application
 """
-from flask import Flask, render_template
+from flask import Flask
+from flask import render_template
 
 app = Flask(__name__)
 
