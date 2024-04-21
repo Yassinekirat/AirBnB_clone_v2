@@ -19,10 +19,10 @@ class FileStorage:
         """Returns a dictionary of models currently in storage"""
         new_dict = {}
         if cls is not None:
-            if type(cls) == str:
+            if type(cls) is str:
                 cls = eval(cls)
             for keys, values in self.__objects.items():
-                if type(values) == cls:
+                if type(values) is cls:
                     new_dict[keys] = values
             return new_dict
         return self.__objects
