@@ -25,11 +25,11 @@ def cisnotfun(text):
     return f"C {format(text.replace('_', ' '))}"
 
 
-@app.route("/python/<text>", strict_slashes=False)
 @app.route("/python", strict_slashes=False)
+@app.route("/python/<text>", strict_slashes=False)
 def py(text='is cool'):
     """ display “Python ”, followed by the value of the text"""
-    return f"Python  {format(text.replace('_', ' '))}"
+    return f"Python {format(text.replace('_', ' '))}"
 
 
 if __name__ == "__main__":
