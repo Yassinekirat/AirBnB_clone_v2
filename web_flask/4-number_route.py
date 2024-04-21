@@ -35,7 +35,6 @@ def py(text='is cool'):
 @app.route("/number/<int:n>", strict_slashes=False)
 def num(n):
     """display “n is a number” only if n is an integer"""
-    n = int(n)
     if isinstance(n, int):
         return f"{n} is a number"
 
